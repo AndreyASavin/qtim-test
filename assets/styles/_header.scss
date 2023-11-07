@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  margin: 0 auto;
+  max-width: $desktop-width;
+  padding: 35px 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  &__menu {
+    display: flex;
+  }
+  &__link:nth-child(n + 2) {
+    margin-left: 58px;
+  }
+  &__buttons {
+    display: flex;
+    flex: 0 1 301px;
+    justify-content: flex-end;
+  }
+  &__button:nth-child(n + 2) {
+    margin-left: 16px;
+  }
+}

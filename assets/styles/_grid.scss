@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: $tablet-width) {
+  .section {
+    overflow: hidden;
+  }
+}
