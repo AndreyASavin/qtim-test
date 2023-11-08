@@ -4,4 +4,10 @@ export default defineNuxtConfig({
   css: [
     "~~/assets/styles/index.scss"
   ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    }
+  ]
 })

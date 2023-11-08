@@ -1,0 +1,20 @@
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 112px;
+  box-sizing: border-box;
+
+  &__links {
+    display: flex;
+    margin: 0 -16px;
+  }
+
+  &__link {
+    margin: 0 16px;
+  }
+
+}
