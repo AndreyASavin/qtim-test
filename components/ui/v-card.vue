@@ -2,11 +2,11 @@
   <div class="card">
     <div class="card__content">
       <div class="card__image">
-        <img src="/images/image.png" alt="">
+        <img :src="props.image" alt="">
       </div>
       <div class="card__description">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga totam quis explicabo sit!
+          {{props.description}}
         </p>
       </div>
     </div>
@@ -17,7 +17,10 @@
 </template>
 
 <script setup lang="ts">
-
+const props = defineProps<{
+  image: string,
+  description: string,
+}>();
 </script>
 
 <style scoped>
