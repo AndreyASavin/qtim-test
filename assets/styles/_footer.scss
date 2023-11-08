@@ -1,20 +1,26 @@
+.bottom {
+  margin-top: auto;
+}
+
 .footer {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: $desktop-width;
-  margin: 0 auto;
-  padding: 0 112px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $container-margin;
   box-sizing: border-box;
+  margin-bottom: 30px;
 
   &__links {
     display: flex;
-    margin: 0 -16px;
+    margin: 0 (-$column-margin);
   }
 
   &__link {
-    margin: 0 16px;
+    margin: 0 $column-margin;
   }
 
 }
