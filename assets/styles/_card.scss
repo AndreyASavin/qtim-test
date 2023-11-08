@@ -1,0 +1,41 @@
+.cards-container {
+  margin-top: 59px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    & > .card__content {
+      transform: translateY(-32px);
+    }
+    & > .card__link {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__description {
+    margin-top: 24px;
+  }
+
+  &__image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    & > img {
+      height: 280px;
+      display: block;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+  }
+}
