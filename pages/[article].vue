@@ -12,9 +12,9 @@
         </div>
       </div>
       <div class="row t-article-pre b-article-post">
-        <div class="col-6">
-          <p>About</p>
-          <p class="t-article-text">
+        <div class="col-7">
+          <p class="text-0">About</p>
+          <p class="t-article-text text-4">
             {{article.description}}
           </p>
         </div>

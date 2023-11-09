@@ -22,7 +22,7 @@
         <div class="col-12">
           <div class="pages">
             <div class="page arrow__left"
-            v-show="data.activePage > 2"
+            v-show="data.activePage > 3"
             @click="previous">
               <img src="/images/arrow.svg" alt="">
             </div>

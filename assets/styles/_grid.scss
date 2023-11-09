@@ -4,6 +4,16 @@
   margin: 0;
   transition: all 0.2s ease;
 }
+@media screen and (max-width: ($mobile-width - 0.1)) {
+  .m-hide {
+    display: none;
+  }
+}
+@media screen and (max-width: ($tablet-width - 0.1)) {
+  .t-hide {
+    display: none;
+  }
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -15,8 +25,18 @@
 .container {
   max-width: $desktop-width;
   box-sizing: border-box;
-  padding: 0 $container-margin;
+  
   margin: 0 auto;
+}
+@media screen and (min-width: $tablet-width) {
+  .container {
+    padding: 0 $container-margin;
+  }
+}
+@media screen and (max-width: ($tablet-width - 0.1)) {
+  .container {
+    padding: 0 40px;
+  }
 }
 .row {
   display: flex;

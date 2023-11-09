@@ -5,13 +5,13 @@
         <img :src="props.image" alt="">
       </div>
       <div class="card__description">
-        <p>
+        <p class="text-1">
           {{props.description}}
         </p>
       </div>
     </div>
     <div class="card__link">
-      <p>Read more</p>
+      <p class="text-1">Read more</p>
     </div>
   </div>
 </template>
