@@ -7,6 +7,7 @@
   padding: 0 $column-margin;
   box-sizing: border-box;
   margin-top: 40px;
+  text-decoration: none;
 }
 @media screen and (min-width: $tablet-width) {
   .card-container {
@@ -53,6 +54,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    color: $gray-1;
   }
 
   &__image {
@@ -71,5 +73,6 @@
     position: absolute;
     bottom: 0px;
     opacity: 0;
+    color: $violet;
   }
 }

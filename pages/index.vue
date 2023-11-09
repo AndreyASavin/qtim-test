@@ -8,14 +8,14 @@
       </div>
       <div class="row">
         <div class="cards-container">
-          <div class="card-container"
+          <router-link :to="`/${item.id}`" class="card-container"
           v-for="item in articlesAtPage" :key="item.id">
             <v-card
             :image="item.image"
             :description="item.preview"
             >
             </v-card>
-          </div>
+          </router-link>
         </div>
       </div>
       <div class="row b-8">
