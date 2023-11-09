@@ -1,5 +1,6 @@
 .pages {
   display: flex;
+  margin-top: 50px;
 }
 .page {
   width: 44px;
@@ -11,6 +12,7 @@
   background-color: $gray-4;
   color: $gray-1;
   margin-right: 8px;
+  user-select: none;
   &:hover {
     cursor: pointer;
     background-color: $gray-5;
@@ -23,5 +25,11 @@
       background-color: $gray-1;
       color: $white;
     }
+  }
+}
+
+.arrow {
+  &__left {
+    transform: rotate(-180deg);
   }
 }
