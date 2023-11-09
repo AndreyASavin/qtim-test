@@ -1,0 +1,125 @@
+@use 'sass:math';
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+@media screen and (max-width: ($mobile-width - 0.1)) {
+  .m-hide {
+    display: none;
+  }
+}
+@media screen and (max-width: ($tablet-width - 0.1)) {
+  .t-hide {
+    display: none;
+  }
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.section {
+  overflow: hidden;
+}
+.container {
+  max-width: $desktop-width;
+  box-sizing: border-box;
+  
+  margin: 0 auto;
+}
+@media screen and (min-width: $tablet-width) {
+  .container {
+    padding: 0 $container-margin;
+  }
+}
+@media screen and (max-width: ($tablet-width - 0.1)) {
+  .container {
+    padding: 0 40px;
+  }
+}
+.row {
+  display: flex;
+  margin: 0 (-$column-margin);
+}
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: math.div(100%, $columns) * $i;
+    flex: 0 0 math.div(100%, $columns) * $i;
+    padding: 0 $column-margin;
+    box-sizing: border-box;
+  }
+}
+.t {
+  &-0 {
+    margin-top: 4px;
+  }
+  &-1 {
+    margin-top: 8px;
+  }
+  &-2 {
+    margin-top: 12px;
+  }
+  &-3 {
+    margin-top: 16px;
+  }
+  &-4 {
+    margin-top: 24px;
+  }
+  &-5 {
+    margin-top: 36px;
+  }
+  &-6 {
+    margin-top: 40px;
+  }
+  &-7 {
+    margin-top: 56px;
+  }
+  &-8 {
+    margin-top: 120px;
+  }
+  &-9 {
+    margin-top: 140px;
+  }
+  &-article-image {
+    margin-top: 73px;
+  }
+  &-article-pre {
+    margin-top: 80px;
+  }
+  &-article-text {
+    margin-top: 30px;
+  }
+}
+.b {
+  &-0 {
+    margin-bottom: 4px;
+  }
+  &-1 {
+    margin-bottom: 8px;
+  }
+  &-2 {
+    margin-bottom: 12px;
+  }
+  &-3 {
+    margin-bottom: 16px;
+  }
+  &-4 {
+    margin-bottom: 24px;
+  }
+  &-5 {
+    margin-bottom: 36px;
+  }
+  &-6 {
+    margin-bottom: 40px;
+  }
+  &-7 {
+    margin-bottom: 120px;
+  }
+  &-8 {
+    margin-bottom: 140px;
+  }
+  &-article-post {
+    margin-bottom: 80px;
+  }
+}

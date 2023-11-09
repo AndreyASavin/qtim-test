@@ -1,0 +1,78 @@
+@use 'sass:math';
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-container {
+  padding: 0 $column-margin;
+  box-sizing: border-box;
+  margin-top: 40px;
+  text-decoration: none;
+}
+@media screen and (min-width: $tablet-width) {
+  .card-container {
+    width: math.div(100%, $columns) * 3;
+  }
+}
+@media (min-width: ($mobile-width + 200)) and (max-width: ($tablet-width - 0.1)) {
+  .card-container {
+    width: math.div(100%, $columns) * 4;
+  }
+}
+@media (min-width: ($mobile-width)) and (max-width: ($mobile-width + 199.9)) {
+  .card-container {
+    width: math.div(100%, $columns) * 6;
+  }
+}
+@media screen and (max-width: ($mobile-width - 0.1)) {
+  .card-container {
+    width: math.div(100%, $columns) * 12;
+  }
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+    & > .card__content {
+      transform: translateY(-32px);
+    }
+    & > .card__link {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__description {
+    margin-top: 24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: $gray-1;
+  }
+
+  &__image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: $gray-4;
+    & > img {
+      width: 100%;
+      min-height: 100px;
+      display: block;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    color: $violet;
+  }
+}

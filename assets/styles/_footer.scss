@@ -1,0 +1,48 @@
+.bottom {
+  margin-top: auto;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $desktop-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $container-margin;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  &__links {
+    display: flex;
+    margin: 0 (-$column-margin);
+  }
+
+  &__link {
+    margin: 0 $column-margin;
+  }
+
+  &__button {
+    position: absolute;
+    width: 358px;
+    height: 358px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    & > * {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .footer {
+    flex-direction: column;
+  }
+}
