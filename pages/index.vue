@@ -12,7 +12,7 @@
           v-for="item in articlesAtPage" :key="item.id">
             <v-card
             :image="item.image"
-            :description="item.description"
+            :description="item.preview"
             >
             </v-card>
           </div>
